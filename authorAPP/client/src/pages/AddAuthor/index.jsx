@@ -17,6 +17,7 @@ import { AuthorSchema } from "../../validation/AuthorValidation";
 const AddAuthor = () => {
   const navigate = useNavigate();
 
+  //formik
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -30,6 +31,7 @@ const AddAuthor = () => {
     onSubmit: handleSubmit,
   });
 
+  //add
   async function handleSubmit(values, actions) {
     actions.resetForm();
     await addAuthor(values);

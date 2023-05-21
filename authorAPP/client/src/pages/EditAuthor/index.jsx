@@ -22,6 +22,7 @@ const EditAuthor = () => {
   const [author, setAuthor] = useState({});
   const [loading, setLoading] = useState(true);
 
+  //formik
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -50,6 +51,7 @@ const EditAuthor = () => {
     });
   }, [setAuthor]);
 
+  //edit
   async function handleSubmit(values, actions) {
     await editAuthorbyID(id, values);
     Swal.fire({
